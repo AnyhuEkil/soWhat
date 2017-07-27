@@ -44,7 +44,6 @@ Ctrl+F : whyNot 기본 설정 변경
 	오라클 드라이버 메이븐 설정시 repository를 별도로 지정해주어야 한다.
 	지정해주지 않으면 Missing artifact ... 오류 발생
 	출처: http://appsnuri.tistory.com/112 [이야기앱 세상]
-	
 
 <Note05>
 
@@ -53,10 +52,11 @@ Ctrl+F : whyNot 기본 설정 변경
 
 
 <Note06>
-하나씩 만들어보기.
+하나씩 만들어보기. //
 
 <Note07>
 수정 사항 : logging
+
 
 
 
