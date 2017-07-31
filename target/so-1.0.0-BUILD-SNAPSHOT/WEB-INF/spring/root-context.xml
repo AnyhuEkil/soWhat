@@ -3,6 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 더블에스에 있는 부가적인 사항들(굳이 필요 없는것 같아 일단 삭제)
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+    xsi:schemaLocation=
+    "http://mybatis.org/schema/mybatis-spring
+    http://mybatis.org/schema/mybatis-spring-1.2.xsd
+     http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+-->
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
@@ -11,13 +20,16 @@
 		<!-- 드라이버 클래스 이름이 변경됨 -->
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
 		<!-- 연결문자열에 log4jdbc가 추가됨 -->
-		<!-- <property name="url" value="jdbc:log4jdbc:oracle:thin:@192.168.0.110:1522:orcl" />
-		<property name="username" value="auction01" />
-		<property name="password" value="1111" /> -->
 		<property name="url" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"/> 
-		<property name="username" value="auction"/>
+		<property name="username" value="soWhat"/>
 		<property name="password" value="1111"/>
-	</bean>	
+	</bean>
+	<!-- 아파치 DBCP 설정 -->
+    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+            <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+            <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" /> 
+            <property name="username" value="java" /> <property name="password" value="java1234"/> 
+        </bean> -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- mybtis 환경설정파일 위치 참조 -->
@@ -26,10 +38,10 @@
 		<!-- classpath : src/main/resources를 의미 -->
 		<!-- ** : 디렉토리를 의미 -->
 		<!-- * : 파일명을 의미 -->
-		<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml" />
+		<property name="mapperLocations" value="classpath:/mappers/*Mapper.xml" />
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.cto.auction.repository" />
+		<property name="basePackage" value="com.what.so.repository" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"
