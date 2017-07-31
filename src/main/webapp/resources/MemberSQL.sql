@@ -1,0 +1,13 @@
+CREATE TABLE Member
+(
+   USER_ID            NUMBER (10),
+   USER_NAME          VARCHAR2 (100),
+   EMAIL              VARCHAR2 (40),
+   PASSWORD           VARCHAR2 (20),    
+   REGISTER_DATE      DATE DEFAULT SYSDATE,
+   AUTH               NUMBER (1) DEFAULT 1
+)
+NOCACHE
+LOGGING;
+
+
