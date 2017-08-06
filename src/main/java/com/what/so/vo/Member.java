@@ -3,6 +3,10 @@ package com.what.so.vo;
 import java.util.Date;
 
 public class Member {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3e48cb98f48afd0c9023c6a21da9c8f1c370ef22
 	private Integer user_id;
 	private String user_name;
 	private String email;
