@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.what.so.repository.TestDAO">
+	<resultMap type="test" id="testResult" />
+	
+	<!-- 테스트/관리자용 회원정보 -->
+	<select id="testMember" resultType="test">
+		SELECT * FROM AUCTION_USER
+	</select>
+</mapper>
