@@ -1,4 +1,4 @@
-package com.what.so.controller;
+/*package com.what.so.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/*")
-public class Member {
+public class MemberC {
 	@Autowired(required = false)
 	
 	@RequestMapping("admin/member.do")
@@ -16,7 +16,7 @@ public class Member {
 		mav.addObject(
 		mav.setViewName(
 		return mav;
-	}
+	}*/
 
 /*	// 로그인 접속
 	@RequestMapping("login/login.do")
